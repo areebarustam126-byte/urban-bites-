@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu — Urban Bites</title>
+    <meta name="description"
+        content="Browse the full Urban Bites menu: burgers, pizza, pasta, fries, fried chicken, wraps, and drinks. Order online in Karachi." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Urban Bites Home">
+                <span class="logo-icon" aria-hidden="true">🔥</span>
+                <span class="logo-text">URBAN<span>BITES</span></span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="story.html">Our Story</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to Light Mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-badge" aria-live="polite"></span>
+                </a>
+                <a href="menu.html" class="btn-order nav-order">Order Now</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="cart-btn">🛒 Cart</a>
+        <button class="theme-toggle" aria-label="Switch to Light Mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            Theme
+        </button>
+        <a href="menu.html" class="btn btn-primary">Order Now →</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero menu-hero" aria-label="Menu page header">
+        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1800&q=85"
+            alt="Vibrant Urban Bites food spread" class="page-hero-bg" loading="eager" />
+        <div class="page-hero-content">
+            <p class="page-hero-label section-label">Our Menu</p>
+            <h1>Craft Food, <em>Bold Flavours</em></h1>
+        </div>
+    </section>
+
+    <!-- FILTERS -->
+    <div class="menu-filters-bar" id="filtersBar" role="navigation" aria-label="Menu categories">
+        <div class="filters-inner">
+            <button class="filter-btn active" data-cat="all" aria-pressed="true"><span class="filter-icon">✨</span> All
+                Items</button>
+            <button class="filter-btn" data-cat="burgers" aria-pressed="false"><span class="filter-icon">🍔</span>
+                Burgers</button>
+            <button class="filter-btn" data-cat="pizza" aria-pressed="false"><span class="filter-icon">🍕</span>
+                Pizza</button>
+            <button class="filter-btn" data-cat="pasta" aria-pressed="false"><span class="filter-icon">🍝</span>
+                Pasta</button>
+            <button class="filter-btn" data-cat="fries" aria-pressed="false"><span class="filter-icon">🍟</span>
+                Fries</button>
+            <button class="filter-btn" data-cat="fried-chicken" aria-pressed="false"><span class="filter-icon">🍗</span>
+                Fried Chicken</button>
+            <button class="filter-btn" data-cat="wraps" aria-pressed="false"><span class="filter-icon">🌯</span>
+                Wraps</button>
+            <button class="filter-btn" data-cat="drinks" aria-pressed="false"><span class="filter-icon">🥤</span>
+                Drinks</button>
+        </div>
+    </div>
+
+    <!-- MENU GRID -->
+    <section class="section menu-section">
+        <div class="section-inner">
+            <div class="menu-grid" id="menuGrid" aria-label="Menu items">
+
+                <!-- BURGERS -->
+                <article class="menu-card" data-cat="burgers">
+                    <a href="product.html?id=ub-smash" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=85"
+                                alt="Urban Smash Double burger" loading="lazy" class="menu-card-img" />
+                            <span class="menu-badge">Best Seller</span>
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Burgers</span>
+                        <h2 class="card-title"><a href="product.html?id=ub-smash">Urban Smash Double</a></h2>
+                        <p class="card-desc">Two smashed patties, American cheese, caramelised onions, secret sauce,
+                            brioche bun.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 890</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=ub-smash" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="ub-smash"
+                                    data-name="Urban Smash Double" data-price="890"
+                                    data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="burgers">
+                    <a href="product.html?id=bbq-tower" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&q=85"
+                                alt="BBQ Tower Burger" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Burgers</span>
+                        <h2 class="card-title"><a href="product.html?id=bbq-tower">BBQ Tower Burger</a></h2>
+                        <p class="card-desc">Beef patty, smoky BBQ sauce, crispy onion rings, bacon-style beef rasher,
+                            cheddar.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 950</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=bbq-tower" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="bbq-tower"
+                                    data-name="BBQ Tower Burger" data-price="950"
+                                    data-img="https://images.unsplash.com/photo-1550317138-10000687a72b?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="burgers">
+                    <a href="product.html?id=mushroom-swiss" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=85"
+                                alt="Mushroom Swiss Burger" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Burgers</span>
+                        <h2 class="card-title"><a href="product.html?id=mushroom-swiss">Mushroom Swiss Melt</a></h2>
+                        <p class="card-desc">Sautéed wild mushrooms, Swiss cheese, truffle aioli, arugula, toasted bun.
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 820</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=mushroom-swiss" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="mushroom-swiss"
+                                    data-name="Mushroom Swiss Melt" data-price="820"
+                                    data-img="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PIZZA -->
+                <article class="menu-card" data-cat="pizza">
+                    <a href="product.html?id=marg-pizza" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=85"
+                                alt="Margherita Royale pizza" loading="lazy" class="menu-card-img" />
+                            <span class="menu-badge">Fan Fave</span>
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Pizza</span>
+                        <h2 class="card-title"><a href="product.html?id=marg-pizza">Margherita Royale</a></h2>
+                        <p class="card-desc">Stone-baked base, San Marzano tomatoes, buffalo mozzarella, fresh basil
+                            drizzle.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 1,150</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=marg-pizza" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="marg-pizza"
+                                    data-name="Margherita Royale" data-price="1150"
+                                    data-img="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="pizza">
+                    <a href="product.html?id=BBQ-chicken-pizza" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85"
+                                alt="BBQ Chicken Pizza" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Pizza</span>
+                        <h2 class="card-title"><a href="product.html?id=BBQ-chicken-pizza">BBQ Chicken Blaze</a></h2>
+                        <p class="card-desc">Shredded BBQ chicken, caramelised onions, smoked mozzarella, jalapeño
+                            drizzle.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 1,250</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=BBQ-chicken-pizza" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="BBQ-chicken-pizza"
+                                    data-name="BBQ Chicken Blaze" data-price="1250"
+                                    data-img="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PASTA -->
+                <article class="menu-card" data-cat="pasta">
+                    <a href="product.html?id=truffle-pasta" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=85"
+                                alt="Truffle Prawn Linguine" loading="lazy" class="menu-card-img" />
+                            <span class="menu-badge">Chef's Pick</span>
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Pasta</span>
+                        <h2 class="card-title"><a href="product.html?id=truffle-pasta">Truffle Prawn Linguine</a></h2>
+                        <p class="card-desc">Al dente linguine, tiger prawns, truffle oil, parmesan, fresh red chilli.
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 1,300</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=truffle-pasta" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="truffle-pasta"
+                                    data-name="Truffle Prawn Linguine" data-price="1300"
+                                    data-img="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="pasta">
+                    <a href="product.html?id=rose-pasta" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=600&q=85"
+                                alt="Rose Sauce Chicken Penne" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Pasta</span>
+                        <h2 class="card-title"><a href="product.html?id=rose-pasta">Rose Chicken Penne</a></h2>
+                        <p class="card-desc">Grilled chicken, house rose sauce, roasted peppers, fresh cream, basil oil.
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 1,100</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=rose-pasta" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="rose-pasta"
+                                    data-name="Rose Chicken Penne" data-price="1100"
+                                    data-img="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FRIES -->
+                <article class="menu-card" data-cat="fries">
+                    <a href="product.html?id=loaded-fries" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=85"
+                                alt="Loaded Cheesy Fries" loading="lazy" class="menu-card-img" />
+                            <span class="menu-badge">🔥 Hot</span>
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Fries</span>
+                        <h2 class="card-title"><a href="product.html?id=loaded-fries">Loaded Cheese Fries</a></h2>
+                        <p class="card-desc">Crinkle fries, nacho cheese sauce, jalapeños, crunchy toppings.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 450</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=loaded-fries" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="loaded-fries"
+                                    data-name="Loaded Cheese Fries" data-price="450"
+                                    data-img="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="fries">
+                    <a href="product.html?id=classic-fries" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?w=600&q=85"
+                                alt="Classic Salted Fries" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Fries</span>
+                        <h2 class="card-title"><a href="product.html?id=classic-fries">Classic Salted Fries</a></h2>
+                        <p class="card-desc">Golden, crispy, perfectly seasoned thin-cut fries. The purist's choice.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 280</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=classic-fries" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="classic-fries"
+                                    data-name="Classic Salted Fries" data-price="280"
+                                    data-img="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FRIED CHICKEN -->
+                <article class="menu-card" data-cat="fried-chicken">
+                    <a href="product.html?id=crunch-chicken" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&q=85"
+                                alt="Crunch Fire Chicken" loading="lazy" class="menu-card-img" />
+                            <span class="menu-badge" style="background:var(--orange);color:var(--black);">🔥
+                                Spicy</span>
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Fried Chicken</span>
+                        <h2 class="card-title"><a href="product.html?id=crunch-chicken">Crunch Fire Chicken</a></h2>
+                        <p class="card-desc">Nashville hot chicken thigh, pickles, honey-sriracha drizzle, sesame bun.
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 750</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=crunch-chicken" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="crunch-chicken"
+                                    data-name="Crunch Fire Chicken" data-price="750"
+                                    data-img="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="fried-chicken">
+                    <a href="product.html?id=crispy-strips" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=600&q=85"
+                                alt="Crispy Chicken Strips" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Fried Chicken</span>
+                        <h2 class="card-title"><a href="product.html?id=crispy-strips">Crispy Chicken Strips</a></h2>
+                        <p class="card-desc">Juicy breast strips, panko crust, served with smoky chipotle dip.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 680</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=crispy-strips" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="crispy-strips"
+                                    data-name="Crispy Chicken Strips" data-price="680"
+                                    data-img="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- WRAPS -->
+                <article class="menu-card" data-cat="wraps">
+                    <a href="product.html?id=shawarma-wrap" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600&q=85"
+                                alt="Smoky Chicken Shawarma Wrap" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Wraps</span>
+                        <h2 class="card-title"><a href="product.html?id=shawarma-wrap">Smoky Shawarma Wrap</a></h2>
+                        <p class="card-desc">Grilled chicken, garlic sauce, pickles, fresh veggies in a warm flatbread.
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 520</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=shawarma-wrap" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="shawarma-wrap"
+                                    data-name="Smoky Shawarma Wrap" data-price="520"
+                                    data-img="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="wraps">
+                    <a href="product.html?id=bbq-wrap" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=85"
+                                alt="BBQ Beef Wrap" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Wraps</span>
+                        <h2 class="card-title"><a href="product.html?id=bbq-wrap">BBQ Beef Wrap</a></h2>
+                        <p class="card-desc">Seasoned ground beef, BBQ sauce, lettuce, tomato, cheddar in a flour
+                            tortilla.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 580</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=bbq-wrap" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="bbq-wrap"
+                                    data-name="BBQ Beef Wrap" data-price="580"
+                                    data-img="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- DRINKS -->
+                <article class="menu-card" data-cat="drinks">
+                    <a href="product.html?id=oreo-shake" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=85"
+                                alt="Oreo Thick Shake" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Drinks</span>
+                        <h2 class="card-title"><a href="product.html?id=oreo-shake">Oreo Thick Shake</a></h2>
+                        <p class="card-desc">Rich vanilla soft-serve, Oreo crumbles, whipped cream, chocolate drizzle.
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 380</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=oreo-shake" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="oreo-shake"
+                                    data-name="Oreo Thick Shake" data-price="380"
+                                    data-img="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="drinks">
+                    <a href="product.html?id=lemonade" class="menu-card-img-link">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=85"
+                                alt="Mint Lemonade" loading="lazy" class="menu-card-img" />
+                        </div>
+                    </a>
+                    <div class="menu-card-body">
+                        <span class="card-label">Drinks</span>
+                        <h2 class="card-title"><a href="product.html?id=lemonade">Fresh Mint Lemonade</a></h2>
+                        <p class="card-desc">Hand-squeezed lemons, crushed mint, a hint of ginger, served chilled.</p>
+                        <div class="card-footer">
+                            <span class="card-price">PKR 220</span>
+                            <div class="menu-card-actions">
+                                <a href="product.html?id=lemonade" class="btn btn-ghost btn-xs">Details</a>
+                                <button class="btn btn-primary btn-xs add-cart-btn" data-id="lemonade"
+                                    data-name="Fresh Mint Lemonade" data-price="220"
+                                    data-img="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&q=80">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- /menu-grid -->
+
+            <!-- Empty State -->
+            <div class="menu-empty" id="menuEmpty" style="display:none;">
+                <p>🔍 No items in this category yet. <a href="menu.html">View all</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">URBAN<span>BITES</span></span>
+                    <p>Bold flavour. Zero ordinary. Karachi's most cinematic dining experience.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterMenu('burgers');return false;">Burgers</a></li>
+                        <li><a href="#" onclick="filterMenu('pizza');return false;">Pizza</a></li>
+                        <li><a href="#" onclick="filterMenu('pasta');return false;">Pasta</a></li>
+                        <li><a href="#" onclick="filterMenu('fries');return false;">Fries</a></li>
+                        <li><a href="#" onclick="filterMenu('drinks');return false;">Drinks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <address>
+                        <strong>Urban Bites HQ</strong>
+                        Plot 47, Block 4, Clifton<br />Karachi, Sindh 75600<br /><br />
+                        <strong>Hours</strong>
+                        Mon–Sun: 12 PM – 1 AM
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Urban Bites. All rights reserved.</p>
+                <p>Made with 🔥 in Karachi</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

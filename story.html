@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story — Urban Bites</title>
+    <meta name="description"
+        content="Discover the story behind Urban Bites — how a bold idea became Karachi's most cinematic dining destination." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="story.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Urban Bites Home">
+                <span class="logo-icon" aria-hidden="true">🔥</span>
+                <span class="logo-text">URBAN<span>BITES</span></span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="story.html" class="active">Our Story</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to Light Mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-badge" aria-live="polite"></span>
+                </a>
+                <a href="menu.html" class="btn-order nav-order">Order Now</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="cart-btn">🛒 Cart</a>
+        <button class="theme-toggle" aria-label="Switch to Light Mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <span>Toggle Theme</span>
+        </button>
+    </div>
+
+    <!-- HERO -->
+    <section class="story-hero" aria-label="Our Story header">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1800&q=85"
+            alt="Urban Bites restaurant kitchen atmosphere" class="story-hero-img" loading="eager" />
+        <div class="story-hero-overlay"></div>
+        <div class="story-hero-content">
+            <h1 class="story-hero-title">Born from <em>Bold</em> Ideas.</h1>
+            <p class="story-hero-sub">A kitchen. A vision. A city hungry for something extraordinary.</p>
+        </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="section manifesto-section">
+        <div class="section-inner">
+            <div class="manifesto-grid">
+                <div class="manifesto-text reveal-left">
+                    <div class="section-label">The Beginning</div>
+                    <h2 class="section-title">Where It <em>All Started</em></h2>
+                    <p class="story-para">Urban Bites began in 2024 as a single obsession: what if fast food could taste
+                        like fine dining? Not in a gimmicky way. Not with white tablecloths. But real — with fire,
+                        craft, and relentless attention to every ingredient.</p>
+                    <p class="story-para">Our founders grew up eating on Karachi's streets, then trained in professional
+                        kitchens across the city. They saw a gap — food that moves fast but never cuts corners — and
+                        decided to fill it.</p>
+                    <a href="menu.html" class="btn btn-primary mt-32">Taste the Vision →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TIMELINE -->
+    <section class="section timeline-section">
+        <div class="section-inner">
+            <header class="text-center reveal">
+                <div class="section-label">Milestones</div>
+                <h2 class="section-title">The <em>Journey</em></h2>
+            </header>
+            <div class="journey-grid mt-48">
+                <div class="journey-card reveal">
+                    <span class="journey-year">2021</span>
+                    <h3>The Spark</h3>
+                    <p>Where the vision for craft food began.</p>
+                </div>
+                <div class="journey-card reveal d-1">
+                    <span class="journey-year">2022</span>
+                    <h3>The Idea</h3>
+                    <p>Karachi deserves bold local flavor.</p>
+                </div>
+                <div class="journey-card reveal d-2">
+                    <span class="journey-year">2023</span>
+                    <h3>Kitchen Lab</h3>
+                    <p>18 months testing 600+ prototypes.</p>
+                </div>
+                <div class="journey-card reveal d-1">
+                    <span class="journey-year">2024</span>
+                    <h3>Opening</h3>
+                    <p>Doors open to 200+ guests in Clifton.</p>
+                </div>
+                <div class="journey-card reveal d-2">
+                    <span class="journey-year">2025</span>
+                    <h3>Expanding</h3>
+                    <p>New craft creations and community.</p>
+                </div>
+                <div class="journey-card reveal d-3">
+                    <span class="journey-year">Now</span>
+                    <h3>5K+ Served</h3>
+                    <p>Karachi's acclaimed independent kitchen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM PHOTOS -->
+    <section class="section team-section">
+        <div class="section-inner">
+            <header class="text-center reveal">
+                <div class="section-label">The People</div>
+                <h2 class="section-title">Meet the <em>Fire-Starters</em></h2>
+            </header>
+            <div class="team-grid mt-48">
+                <div class="team-card reveal d-1">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&q=80"
+                        alt="Chef Omar Siddiqui" loading="lazy" />
+                    <div class="team-info">
+                        <h3>Chef Omar</h3>
+                    </div>
+                </div>
+                <div class="team-card reveal d-2">
+                    <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=500&q=80" alt="Zara Baig"
+                        loading="lazy" />
+                    <div class="team-info">
+                        <h3>Zara Baig</h3>
+                    </div>
+                </div>
+                <div class="team-card reveal d-3">
+                    <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500&q=80" alt="Ali Raza"
+                        loading="lazy" />
+                    <div class="team-info">
+                        <h3>Ali Raza</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="story-cta reveal">
+        <div class="story-cta-inner">
+            <h2>Ready to taste the <em>story?</em></h2>
+            <p>Every dish is a chapter. Come and write yours.</p>
+            <div class="story-cta-btns">
+                <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+                <a href="contact.html" class="btn btn-ghost">Find Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">URBAN<span>BITES</span></span>
+                    <p>Bold flavour. Zero ordinary. Karachi's most cinematic dining experience.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="menu.html?cat=burgers">Burgers</a></li>
+                        <li><a href="menu.html?cat=pizza">Pizza</a></li>
+                        <li><a href="menu.html?cat=pasta">Pasta</a></li>
+                        <li><a href="menu.html?cat=drinks">Drinks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <address>
+                        <strong>Urban Bites HQ</strong>
+                        Plot 47, Block 4, Clifton<br />Karachi, Sindh 75600<br /><br />
+                        <strong>Hours</strong> Mon–Sun: 12 PM – 1 AM
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Urban Bites. All rights reserved.</p>
+                <p>Made with 🔥 in Karachi</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Product — Urban Bites</title>
+    <meta name="description" content="View details, customise your order, and add items to your cart at Urban Bites." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="product.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Urban Bites Home">
+                <span class="logo-icon" aria-hidden="true">🔥</span>
+                <span class="logo-text">URBAN<span>BITES</span></span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="story.html">Our Story</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to Light Mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-badge" aria-live="polite"></span>
+                </a>
+                <a href="menu.html" class="btn-order nav-order">Order Now</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,0.12);">🛒 Cart</a>
+        <button class="theme-toggle" aria-label="Switch to Light Mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            Theme
+        </button>
+        <a href="menu.html" class="btn btn-primary">Order Now →</a>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar" aria-label="Breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="menu.html">Menu</a>
+            <span aria-hidden="true">/</span>
+            <span id="breadProduct">Product</span>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="section product-section">
+        <div class="section-inner">
+            <div class="product-grid" id="productGrid">
+                <!-- Populated by JS -->
+                <div class="product-skeleton" id="productSkeleton">
+                    <div class="skel-img"></div>
+                    <div class="skel-body">
+                        <div class="skel-line skel-label"></div>
+                        <div class="skel-line skel-title"></div>
+                        <div class="skel-line skel-desc"></div>
+                        <div class="skel-line skel-desc" style="width:70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RELATED ITEMS -->
+    <section class="section related-section">
+        <div class="section-inner">
+            <header class="reveal">
+                <div class="section-label">You May Also Like</div>
+                <h2 class="section-title">More <em>Favourites</em></h2>
+            </header>
+            <div class="related-grid mt-32" id="relatedGrid"><!-- JS populated --></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">URBAN<span>BITES</span></span>
+                    <p>Bold flavour. Zero ordinary.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="menu.html?cat=burgers">Burgers</a></li>
+                        <li><a href="menu.html?cat=pizza">Pizza</a></li>
+                        <li><a href="menu.html?cat=pasta">Pasta</a></li>
+                        <li><a href="menu.html?cat=fries">Fries</a></li>
+                        <li><a href="menu.html?cat=drinks">Drinks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <address>
+                        <strong>Urban Bites HQ</strong>
+                        Plot 47, Block 4, Clifton<br />Karachi, Sindh 75600<br /><br />
+                        <strong>Hours</strong>
+                        Mon–Sun: 12 PM – 1 AM
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Urban Bites. All rights reserved.</p>
+                <p>Made with 🔥 in Karachi</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script src="product.js"></script>
+</body>
+
+</html>

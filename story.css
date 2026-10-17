@@ -1,0 +1,466 @@
+/* ============================================================
+   story.css — Our Story page
+============================================================ */
+
+/* ===== HERO ===== */
+.story-hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: var(--nav-h) 32px 40px;
+    overflow: hidden;
+}
+
+.story-hero-img {
+    position: absolute;
+    inset: -5% 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    filter: brightness(0.45);
+    animation: storyHeroKenBurns 28s ease-in-out infinite alternate;
+    will-change: transform;
+    pointer-events: none;
+}
+
+@keyframes storyHeroKenBurns {
+    0% {
+        transform: scale(1.04) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: scale(1.11) translate3d(-1%, -0.8%, 0);
+    }
+
+    100% {
+        transform: scale(1.06) translate3d(1%, -0.5%, 0);
+    }
+}
+
+.story-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.3) 60%, transparent 100%);
+}
+
+.story-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.story-hero-title {
+    font-family: var(--ff-display);
+    font-size: clamp(28px, 5vw, 56px);
+    font-weight: 900;
+    color: var(--ivory);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.story-hero-title em {
+    color: var(--orange);
+    font-style: italic;
+}
+
+.story-hero-sub {
+    font-size: clamp(12px, 1.6vw, 15px);
+    color: var(--ivory-dim);
+    max-width: 400px;
+}
+
+/* ===== MANIFESTO ===== */
+.manifesto-grid {
+    display: block;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-para {
+    font-size: 15px;
+    color: var(--ivory-dim);
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.manifesto-img {
+    position: relative;
+}
+
+.manifesto-img img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+}
+
+.manifesto-quote {
+    position: absolute;
+    bottom: -24px;
+    left: -24px;
+    background: var(--charcoal);
+    border: 1px solid var(--border-warm);
+    border-left: 4px solid var(--orange);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    font-family: var(--ff-display);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ivory);
+    line-height: 1.4;
+    max-width: 240px;
+    box-shadow: var(--shadow-md);
+}
+
+/* ===== VALUES ===== */
+.values-section {
+    background: var(--charcoal);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.value-card {
+    background: var(--charcoal-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    transition: border-color var(--transition-med), transform var(--transition-med);
+}
+
+.value-card:hover {
+    border-color: var(--border-warm);
+    transform: translateY(-4px);
+}
+
+.value-icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.value-card h3 {
+    font-family: var(--ff-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ivory);
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 13px;
+    color: var(--ivory-faint);
+    line-height: 1.7;
+}
+
+/* ===== JOURNEY / TIMELINE CARDS ===== */
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.journey-card {
+    background: var(--charcoal-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color var(--transition-med), transform var(--transition-med);
+}
+
+.journey-card:hover {
+    border-color: var(--border-warm);
+    transform: translateY(-3px);
+}
+
+.journey-year {
+    font-family: var(--ff-headline);
+    font-size: 15px;
+    color: var(--orange);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.journey-card h3 {
+    font-family: var(--ff-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ivory);
+    margin-bottom: 6px;
+}
+
+.journey-card p {
+    font-size: 12px;
+    color: var(--ivory-faint);
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* Fallback legacy timeline styles if referenced */
+.timeline {
+    display: none;
+}
+
+/* ===== TEAM ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.team-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: border-color var(--transition-med), transform var(--transition-med);
+    background: var(--charcoal-2);
+}
+
+.team-card:hover {
+    border-color: var(--border-warm);
+    transform: translateY(-4px);
+}
+
+.team-card img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(20%);
+    transition: filter var(--transition-med), transform var(--transition-slow);
+}
+
+.team-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.04);
+}
+
+.team-info {
+    padding: 20px;
+}
+
+.team-info h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ivory);
+    margin-bottom: 4px;
+}
+
+.team-info span {
+    font-size: 12px;
+    color: var(--orange);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ===== CTA STRIP ===== */
+.story-cta {
+    background: var(--charcoal);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 80px 32px;
+}
+
+.story-cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.story-cta h2 {
+    font-family: var(--ff-display);
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    color: var(--ivory);
+    margin-bottom: 12px;
+}
+
+.story-cta h2 em {
+    color: var(--orange);
+    font-style: italic;
+}
+
+.story-cta p {
+    font-size: 16px;
+    color: var(--ivory-faint);
+    margin-bottom: 32px;
+}
+
+.story-cta-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .story-hero {
+        padding: calc(var(--nav-h) + 16px) 24px 32px;
+        min-height: 50svh;
+        height: 50svh;
+        max-height: 400px;
+    }
+
+    .manifesto-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .manifesto-quote {
+        position: static;
+        max-width: none;
+        margin-top: 16px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .story-hero {
+        min-height: 50svh !important;
+        height: 50svh !important;
+        max-height: 380px !important;
+        padding: calc(var(--nav-h) + 8px) 16px 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .story-hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .story-hero-title {
+        font-size: clamp(22px, 6vw, 30px) !important;
+        line-height: 1.1 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .story-hero-sub {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        line-height: 1.4 !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .journey-card {
+        padding: 10px 5px !important;
+        border-radius: var(--radius-sm) !important;
+    }
+
+    .journey-year {
+        font-size: 12px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .journey-card h3 {
+        font-size: 11px !important;
+        margin-bottom: 2px !important;
+        line-height: 1.2 !important;
+    }
+
+    .journey-card p {
+        font-size: 9px !important;
+        line-height: 1.25 !important;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .team-card:nth-child(3) {
+        grid-column: 1 / -1 !important;
+        width: calc(50% - 5px) !important;
+        margin: 0 auto !important;
+    }
+
+    .team-card img {
+        height: 130px !important;
+        aspect-ratio: 1/1 !important;
+        object-fit: cover !important;
+    }
+
+    .team-info {
+        padding: 6px 8px !important;
+        text-align: center !important;
+    }
+
+    .team-info h3 {
+        font-size: 12px !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .manifesto-text .section-title {
+        font-size: clamp(20px, 5.5vw, 26px) !important;
+        line-height: 1.2 !important;
+    }
+
+    .story-para {
+        font-size: 13px;
+    }
+
+    .manifesto-quote {
+        font-size: 14px;
+    }
+
+    .story-cta {
+        padding: 48px 20px !important;
+    }
+
+    .story-cta h2 {
+        font-size: clamp(20px, 5.5vw, 26px) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .story-cta p {
+        font-size: 13px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .story-cta-btns {
+        gap: 10px !important;
+    }
+
+    .story-cta-btns .btn {
+        padding: 10px 22px !important;
+        font-size: 12px !important;
+    }
+}
