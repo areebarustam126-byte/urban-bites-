@@ -1,0 +1,10 @@
+{
+  "messages": [
+    {
+      "name": "Test User",
+      "contact": "test@gmail.com",
+      "message": "Hello, testing contact form!",
+      "created_at": "2026-10-16T14:33:59.217Z"
+    }
+  ]
+}

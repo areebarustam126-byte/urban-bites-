@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: urban-bites-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 10000          # Render assigns this automatically
+      - key: NODE_ENV
+        value: production
+      # ── MySQL Database (PlanetScale or any cloud MySQL) ──
+      - key: DB_HOST
+        sync: false           # Set manually in Render dashboard
+      - key: DB_PORT
+        value: 3306
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+      - key: DB_NAME
+        value: urban_bites
+      # ── Email Notifications ──────────────────────────────
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: WHATSAPP_NUMBER
+        value: 923115848297

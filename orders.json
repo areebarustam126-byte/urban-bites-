@@ -1,0 +1,24 @@
+{
+  "orders": [
+    {
+      "id": "UB-9WL7467C",
+      "customer_name": "Test User",
+      "phone": "03001234567",
+      "address": "House 1, Street 2, Lahore",
+      "notes": "",
+      "payment_method": "cod",
+      "items": [
+        {
+          "price": 500,
+          "name": "Biryani",
+          "id": "item1",
+          "qty": 2
+        }
+      ],
+      "subtotal": 1000,
+      "delivery_fee": 0,
+      "total": 1000,
+      "created_at": "2026-10-16T14:33:55.904Z"
+    }
+  ]
+}

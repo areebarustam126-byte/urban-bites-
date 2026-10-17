@@ -1,0 +1,18 @@
+[DB] JSON storage ready — orders.json & contact.json
+
+┌─────────────────────────────────────────┐
+│  🔥 Urban Bites backend running          │
+│     http://localhost:3001               │
+│                                         │
+│  Database: SQLite (urban_bites.db)      │
+│                                         │
+│  API endpoints:                         │
+│    POST /api/orders   — place an order  │
+│    POST /api/contact  — contact form    │
+│    GET  /api/health   — health check    │
+└─────────────────────────────────────────┘
+
+[ORDER] Saved — UB-9WL7467C for Test User | PKR 1000
+[MAIL] Failed to send email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4a1ce33155fsm36813145e9.4 - gsmtp
+[CONTACT] Saved message from Test User (test@gmail.com)
